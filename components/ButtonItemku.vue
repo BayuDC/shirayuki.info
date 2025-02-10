@@ -1,11 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps<{
+  to?: string;
+}>();
+</script>
 
 <template>
   <Button>
-    <div class="flex items-center gap-1">
+    <NuxtLink :to="to" :external="true" class="flex items-center gap-1">
       <div class="pt-0.5">Beli di</div>
       <img class="h-6 w-full" src="assets/itemku.png" />
-    </div>
+    </NuxtLink>
   </Button>
 </template>
 
