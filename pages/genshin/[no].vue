@@ -20,18 +20,15 @@ const { data } = await useFetch<any>('https://kotochi.vercel.app/api/d4g4ng4n?no
           <ProductBadge>AR {{ data.account.ar }}</ProductBadge>
         </div>
       </div>
-      <ButtonItemku :to="data.account.url" class="mt-4 md:mt-0" />
+      <ButtonItemku :to="data.account.url" class="mt-4 md:mt-0" v-if="false" />
     </div>
 
     <div class="grid md:grid-cols-2 gap-4 mt-8">
-      <ProductImage />
-      <ProductImage />
-      <ProductImage />
-      <ProductImage />
+      <ProductImage v-for="i in 8" :index="i" :no="data.account.no" />
     </div>
 
     <div class="mt-6 flex justify-center w-full">
-      <ButtonItemku :to="data.account.url" class="w-full md:w-auto" />
+      <ButtonItemku :to="data.account.url" class="w-full md:w-auto" v-if="false" />
     </div>
   </div>
 </template>
