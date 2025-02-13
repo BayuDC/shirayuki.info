@@ -3,6 +3,18 @@ const route = useRoute();
 
 const no = route.params.no;
 
+const labels = [
+  '',
+  'Karakter',
+  'Senjata',
+  'Artifact',
+  'Material',
+  'Item Quest',
+  'Item Beharga',
+  'Avatar',
+  'Archon Quest',
+];
+
 const { data } = await useFetch<any>('https://kotochi.vercel.app/api/d4g4ng4n?no=' + no);
 </script>
 
@@ -24,7 +36,7 @@ const { data } = await useFetch<any>('https://kotochi.vercel.app/api/d4g4ng4n?no
     </div>
 
     <div class="grid md:grid-cols-2 gap-4 mt-8">
-      <ProductImage v-for="i in 8" :index="i" :no="data.account.no" />
+      <ProductImage v-for="i in 8" :index="i" :no="data.account.no" :label="labels[i]" />
     </div>
 
     <div class="mt-6 flex justify-center w-full">

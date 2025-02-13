@@ -14,6 +14,9 @@ importers:
       '@nuxtjs/google-fonts':
         specifier: ^3.2.0
         version: 3.2.0(magicast@0.3.5)
+      '@unlazy/nuxt':
+        specifier: ^0.12.1
+        version: 0.12.1(magicast@0.3.5)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -842,6 +845,12 @@ packages:
     resolution: {integrity: sha512-Jfi7t/XNBnlcauP9UTH3VHBcS69G70ikFd2e5zdgULLDRWpOlLs1sSTH1V2juNptc93DOk9RQfC5jLWbLcivFw==}
     peerDependencies:
       vue: '>=2.7 || >=3'
+
+  '@unlazy/core@0.12.1':
+    resolution: {integrity: sha512-FTTu09EuvlX2+Rr7Gwl0SI3WXxHmIMmC9BmuzKVic3yulLiB0Qx6m7HYcDtj/aPeE2OoNHeSw5+KfsF50WAU2A==}
+
+  '@unlazy/nuxt@0.12.1':
+    resolution: {integrity: sha512-sjdmf7za5pL8YVsSOGnglNyecRg2y2R31WqLL0UOZlV2VAF3onvvDxZt6AWPOYpAY+OtqS5hCw5K5i9WG7cKRA==}
 
   '@vercel/nft@0.27.10':
     resolution: {integrity: sha512-zbaF9Wp/NsZtKLE4uVmL3FyfFwlpDyuymQM1kPbeT0mVOHKDQQNjnnfslB3REg3oZprmNFJuh3pkHBk2qAaizg==}
@@ -3099,6 +3108,9 @@ packages:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
 
+  unlazy@0.12.1:
+    resolution: {integrity: sha512-NdUAiAzZpqYzwCKFPLcFoWqoodwMH3Ka1ETx38ll92ACJQ/r6XhgCdApFd135paNEKKFstU5fiKvqxxd7dPyqg==}
+
   unplugin-utils@0.2.3:
     resolution: {integrity: sha512-unB2e2ogZwEoMw/X0Gq1vj2jaRKLmTh9wcSEJggESPllcrZI68uO7B8ykixbXqsSwG8r9T7qaHZudXIC/3qvhw==}
     engines: {node: '>=18.12.0'}
@@ -4382,6 +4394,17 @@ snapshots:
       hookable: 5.5.3
       unhead: 1.11.18
       vue: 3.5.13(typescript@5.7.3)
+
+  '@unlazy/core@0.12.1': {}
+
+  '@unlazy/nuxt@0.12.1(magicast@0.3.5)':
+    dependencies:
+      '@nuxt/kit': 3.15.4(magicast@0.3.5)
+      defu: 6.1.4
+      unlazy: 0.12.1
+    transitivePeerDependencies:
+      - magicast
+      - supports-color
 
   '@vercel/nft@0.27.10(rollup@4.34.6)':
     dependencies:
@@ -6967,6 +6990,10 @@ snapshots:
       unplugin-utils: 0.2.3
 
   universalify@2.0.1: {}
+
+  unlazy@0.12.1:
+    dependencies:
+      '@unlazy/core': 0.12.1
 
   unplugin-utils@0.2.3:
     dependencies:
