@@ -2,7 +2,9 @@
 
 <template>
   <Html class="dark">
-    <Head> </Head>
+    <Head>
+      <Title>Shirayuki Hime</Title>
+    </Head>
     <Body>
       <div class="container max-w-screen-xl mx-auto pb-10">
         <Header />

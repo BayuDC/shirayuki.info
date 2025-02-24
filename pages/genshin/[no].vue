@@ -1,7 +1,10 @@
 <script setup lang="ts">
 const route = useRoute();
-
 const no = route.params.no;
+
+const record = useLocalStorage<{
+  expired?: number;
+}>(`visit-record:${no}`, {});
 
 const labels = [
   '',
@@ -16,6 +19,19 @@ const labels = [
 ];
 
 const { data } = await useFetch<any>('https://kotochi.vercel.app/api/d4g4ng4n?no=' + no);
+
+onMounted(async () => {
+  const now = Date.now();
+
+  if (!record.value.expired || now > record.value.expired) {
+    await $fetch('/api/visit-records', {
+      method: 'POST',
+      body: JSON.stringify({ no }),
+    });
+
+    record.value.expired = now + 1000 * 60 * 60 * 1;
+  }
+});
 </script>
 
 <template>

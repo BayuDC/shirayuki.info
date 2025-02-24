@@ -4,7 +4,7 @@ defineProps<{ index: number; no: number; label: string }>();
 const loaded = ref(false);
 const loader = ref(true);
 
-function onLoaded(params: type) {
+function onLoaded() {
   loaded.value = true;
 }
 </script>
